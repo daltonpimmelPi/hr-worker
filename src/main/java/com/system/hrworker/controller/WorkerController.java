@@ -37,6 +37,14 @@ public class WorkerController {
 
         logger.info("PORT = " + env.getProperty("local.server.port")); //numero da porta que esta rodando
 
+        //testando timeout ribbon
+//        try {
+//            Thread.sleep(3000L);
+//        }catch (Exception e){
+//            e.printStackTrace();
+//        }
+
+
         Worker workers = workerRepository.findById(id).get();
         return ResponseEntity.ok(workers);
     }
